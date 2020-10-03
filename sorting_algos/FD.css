@@ -1,0 +1,52 @@
+.branding{
+    font-size: 17px;
+}
+.showcase{
+    background-image: url("spice.jpg");
+    /* background-attachment: fixed;
+    background-repeat: no-repeat; */
+    background-position: center;
+    height: 400px;
+    padding: 140px 100px;
+    color: #fff;
+}
+.showcase h1{
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+ .showcase hr{
+     width: 70px;
+     margin: auto;
+     border-width: 3px;
+     border-color: red;
+ }
+ .showcase p{
+     font-size: 15px;
+     color: sandybrown;
+     padding-bottom: 20px;
+ }
+ 
+ .show1{
+     background-color: lightgrey;
+     height: 130px;
+ }
+ .show1 h2{
+     font-size: 20px;
+     font-weight: 500;
+ }
+ .show1 p{
+     font-size: 15px;
+     color: black;
+ }
+ .show2{
+     background-color: yellowgreen;
+     height: 50px;
+ }
+ .show2 h2{
+     font-size: 20px;
+     font-weight: 500;
+ }
+ html{
+     scroll-behavior: smooth;
+ }
