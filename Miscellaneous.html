@@ -1,0 +1,84 @@
+<!-- I've used java script to solve multiple questions like checking input using regex if the time is in 24 or 12 hours format, String sorting, finding longest string being few of them -->
+
+
+
+
+<!DOCTYPE HTML>
+<HEAD></HEAD>
+<BODY style='background-image: linear-gradient(to right, orange ,yellow, red, purple);'>
+	<script type='text/javascript'>
+		function function1(){
+			var array = document.getElementById("str1").value.split(' ');
+			document.getElementById("stra1").value=array.sort(function (a, b) { return b.length - a.length })[0];
+		}
+		function function2(){
+			var array = document.getElementById("str2").value.split('');
+			document.getElementById("stra2").value=array.map(function(c){return c === c.toUpperCase()?c.toLowerCase():c.toUpperCase()}).join('');
+		}
+		function function3(){
+			var reg_car=/^[W]{1}[B]{1}[0-9]{2}[A-Z]{2}[0-9]{4}$/;
+			if(reg_car.test(document.getElementById("str3").value)==true){
+				document.getElementById("stra3").value="true";
+			}
+			else{
+				document.getElementById("stra3").value="false";
+			}
+		}
+		function function4(){
+			var reg24 = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+			var reg12 = /^(1[012]|[1-9]):[0-5][0-9][AP]M$/;
+			//var reg24 = /^[0-5]\d:[0-5]\d$/;
+			//var reg12 = /^[01]\d:[0-5]\d[AP]M$/;
+			if(document.getElementById("str4").value.match(reg24)){
+				document.getElementById("str4i").value="true";
+			}
+			else{
+				document.getElementById("str4i").value="false";
+			}
+			if(document.getElementById("str4").value.match(reg12)){
+				document.getElementById("str4ii").value="true";
+			}
+			else{
+				document.getElementById("str4ii").value="false";
+			}
+		}
+		function function5(){
+			var str=document.getElementById("str5").value;
+			document.getElementById("stra5").value=str.split('').sort().join('');
+		}
+
+	</script><center><div style="background-color: white; width: 50%;padding-top: 20px; opacity: 0.85;">
+	<strong>Q1.</strong>Enter String to find longest word :&nbsp;
+	<input typr='text' id="str1" placeholder="Enter String"></input>
+	<button onclick="function1()">Answer1</button>
+	<br/><br/>
+	<strong>A1.</strong>Longest Word is :&nbsp;&nbsp;&nbsp;&nbsp;<input typr="text" id="stra1" placeholder="Output is"></input>
+	<br/><br/><br/>
+	<strong>Q2.</strong>Enter String whose case will be swapped :&nbsp;
+	<input typr='text' id="str2" placeholder="Enter String"></input>
+	<button onclick="function2()">Answer2</button>
+	<br/><br/>
+	<strong>A2.</strong>Swapped case string is :&nbsp;&nbsp;&nbsp;&nbsp;<input typr="text" id="stra2" placeholder="Output is"></input><br/><br/><br/>
+	<strong>Q3.</strong>Enter String to validate WB car number plate :&nbsp;
+	<input typr='text' id="str3" placeholder="WB**AG****"></input>
+	<button onclick="function3()">Answer3</button>
+	<br/><br/>
+	<strong>A3.</strong>Bool answer :&nbsp;&nbsp;&nbsp;&nbsp;<input typr="text" id="stra3" placeholder="Output is"></input>
+	<br/><br/><br/>
+	<strong>Q4.</strong>Enter time in 24 hour format or 12 hour format :&nbsp;
+	<input typr='text' id="str4" placeholder="hh:mm"></input>
+	<button onclick="function4()">Answer4</button>
+	<br/><br/>
+	<strong>A4.</strong>Bool answer for 24 hrs :&nbsp;&nbsp;&nbsp;&nbsp;<input typr="text" id="str4i" placeholder="Output is"></input>
+	<br/><br/>
+	<strong>A4.</strong>Bool answer for 12 hrs :&nbsp;&nbsp;&nbsp;&nbsp;<input typr="text" id="str4ii" placeholder="Output is"></input>
+	<br/><br/><br/>
+	<strong>Q5.</strong>Enter String to be sorted :&nbsp;
+	<input typr='text' id="str5" placeholder="Enter alphabets only"></input>
+	<button onclick="function5()">Answer5</button>
+	<br/><br/>
+	<strong>A5.</strong>Sorted String for Q5 is   :&nbsp;&nbsp;&nbsp;&nbsp;<input typr="text" id="stra5" placeholder="Output is"></input><br/>
+	<br/><br/><strong>Q6.</strong>Birthday :&nbsp;
+	<input type="date" id="birthday" name="birthday"><br/><br/></div></center>
+</BODY>
+</HTML>
