@@ -1,15 +1,16 @@
+/*C++ Program to perform Binary Search*/
 #include<iostream>
 using namespace std;
 int main()
 {
 	int i,n,item,pos=-1,first,last,middle;
-	cout<<"How many Elements?";
+	cout<<"How many Elements? ";
 	cin>>n;
 	int ar[n];
-	cout<<"enter the elements of the array";
+	cout<<"Enter the elements of the array: ";
 	for(i=0;i<n;i++)
 		cin>>ar[i];
-	cout<<"Enter the element to be searched";
+	cout<<"Enter the element to be searched: ";
 	cin>>item;
 	first=0;
 	last=n-1;
