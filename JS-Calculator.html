@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Simple JS Calculator</title>
+    </head>
+    <body>
+        <form name="inputForm">
+            <script lanuage="JavaScript">
+                function doCalc(n)
+                {
+                    var num1,num2,result;
+                    num1=document.inputForm.val1.value;
+                    num2=document.inputForm.val2.value;
+                    n1=Number(num1);
+                    n2=Number(num2);
+                    switch(n){
+                        case 1: result= n1+n2;
+                        break;
+                        case 2: result= n1-n2;
+                        break;
+                        case 3: result= n1*n2;
+                        break;
+                        case 4: result= n1/n2;
+                        break;
+                    }
+                    document.inputForm.finalValue.value=result;
+                }
+            </script>
+            <center>
+                <label>Number 1</label>
+                <input type="text" name="val1"><br><br>
+                <label>Number 2</label>
+                <input type="text" name="val2"><br><br>
+                <label>Answer</label>
+                <input type="text" name=finalValue><br><br>
+                <input type="button" value="+" onClick="doCalc(1)">
+                <input type="button" value="-" onClick="doCalc(2)">
+                <input type="button" value="*" onClick="doCalc(3)">
+                <input type="button" value="/" onClick="doCalc(4)">
+            </center>
+
+
+        </form>
+    </body>
+</html>
