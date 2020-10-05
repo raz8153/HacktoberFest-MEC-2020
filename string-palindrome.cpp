@@ -1,4 +1,4 @@
-// Opperation on strings
+// ## Opperation on strings
 // checks whether a string is palindrome or not means, which is same in reading from forward or backword.
 // Prints YES if the string is equal to its reverse either prints NO.  
 
