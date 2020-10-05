@@ -1,6 +1,7 @@
-// ## Opperation on strings
-// checks whether a string is palindrome or not means, which is same in reading from forward or backword.
-// Prints YES if the string is equal to its reverse either prints NO.  
+// ## Opperation on strings using c++ language.
+// checks whether a string is palindrome or not, means, which is same in reading from forward or backword.
+// Prints YES if the string is equal to its reverse either prints NO.
+// takes n as the number of test cases of n-strings and prints either yes or no for each test case.
 
 #include <iostream>
 #include <string>
