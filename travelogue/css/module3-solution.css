@@ -1,0 +1,62 @@
+body{
+    font-size: 16px;
+    color:#fff;
+    background-color: #61122f;
+    font-family: 'Oxygen', sans-serif;
+}
+#header-nav{
+    background-color: #f6b319;
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+}
+.navbar-brand{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0;
+
+}
+.navbar-brand h1{
+    font-family: 'Lora',serif;
+    color: darkblue;
+    font-size: 0.5e;
+    text-transform:uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #222;
+    line-height: .75;
+    margin:0;
+    padding:0;
+    float: left;
+}
+#nav-list{
+    background-color: lightcoral;
+    padding: 0;
+    margin:0;
+    text-align: center;
+    list-style: none;
+    
+}
+#nav-list li{
+    margin: 0;
+    padding: 0;
+    border:1px solid black;
+}
+.col-xs-12{
+    box-sizing: border-box;
+    border:2px solid black;
+    height: 1000px;
+    margin:25px;
+    background-color: burlywood;
+    color: black;
+    
+}
+h3{
+   text-align: center;
+   margin-bottom: 30px;
+}
+.col-xs-12 m-x-2 {
+   margin: 25px;
+   padding: 25px;
+}
+
+
