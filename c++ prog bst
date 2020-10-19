@@ -1,0 +1,145 @@
+#include<iostream>
+#define SPACE 10
+using namespace std;
+class treenode
+{
+public:
+	int value;//data
+	treenode *left;
+	treenode *right;
+	treenode()
+	{
+		value=0;
+		left=NULL;
+		right=NULL;
+	}
+	treenode(int v)
+	{
+		value=v;
+		left=NULL;
+		right=NULL;
+	}
+};
+
+class bst
+{
+public:
+	treenode *root;
+	bst()
+	{
+		root=NULL;
+	}
+
+
+	bool isempty()
+	{
+		if(root==NULL)
+		{
+			return true;	
+		}
+		else
+		{
+			return false;
+		}
+	}	
+	void insertnode(treenode *newnode)
+	{
+		if(root==NULL)
+		{
+			root=newnode;
+			cout<<"value inserted as root node"<<endl;	
+		}
+		else
+		{
+			treenode *temp=root;
+			while(temp!=NULL)
+			{
+
+				if(newnode->value==temp->value)
+				{
+					cout<<"value alreasy exists , insert another"<<endl;
+					return;
+				}
+				else if((newnode->value<temp->value)&&(temp->left==NULL))
+				{
+					temp->left=newnode;
+					cout<<"value inserted in left";
+					break;
+				}	
+				else if(newnode->value<temp->value)
+				{
+					temp=temp->left;
+				}	
+				else if((newnode->value>temp->value)&&(temp->right==NULL))
+				{
+					temp->right=newnode;
+					cout<<"value inserted in right";
+					break;
+				}	
+				else if(newnode->value>temp->value)
+				{
+					temp=temp->right;
+				}	
+			}
+		}
+	}
+
+	void searchnode()
+	{
+		
+	}
+
+	void print2d(treenode *r,int space)
+	{
+		if(r==NULL)
+			return;
+		space +=SPACE;
+		print2d(r->right,space);
+		cout<<endl;
+		for(int i=SPACE;i<space;i++)
+			cout<<" ";
+		cout<<r->value<<"\n";
+		print2d(r->left,space);
+	}
+
+};
+int main()
+{
+	int option,val;
+	bst obj;
+	do
+	{	cout<<"\n";
+		cout<<"SELECT THE OPTION NUMBER"<<endl;
+		cout<<"1.INSERT NODE"<<endl;
+		cout<<"2.SEARCH NODE"<<endl;
+		cout<<"3.DELETE NODE"<<endl;
+		cout<<"4.PRINT BST VALUES"<<endl;
+		cout<<"0.EXIT"<<endl;
+		cin>>option;
+		treenode *newnode= new treenode();//we used heap memory
+		switch(option)
+		{
+			case 0:
+				break;
+			case 1: cout<<"insert"<<endl;
+					cout<<"enter the value to insert in bst";
+					cin>>val;
+					newnode->value=val;
+					obj.insertnode(newnode);
+					cout<<endl;
+					break;
+			case 2: cout<<"search"<<endl;
+					break;
+			case 3: cout<<"delete"<<endl;
+					break;
+			case 4: cout<<"print value"<<endl;
+					obj.print2d(obj.root,5);
+					break;						
+			default:cout<<"enter correct option"<<endl;	
+		}
+
+	}
+	while(option!=0);
+
+	return 0;
+}
