@@ -1,0 +1,39 @@
+@use '~@material/button';
+@import './typography';
+
+:root {
+    --primary: #66f;
+    @extend %font-roboto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 95%;
+    padding: 2rem;
+    border: 1px solid #333;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;    
+}
+
+article {
+    padding: 0 4rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem 4rem;
+}
+@include button.core-styles;
