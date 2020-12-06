@@ -6,7 +6,7 @@ void main()
 {
  int a[50],n,i,j,tmp;
  clrscr();
- cout<<"Enter the size of array=";
+ cout<<"Ente size of array=";
  cin>>n;
  cout<<"Enter array elements=";
   for(i=0;i<n;i++)
